@@ -1,3 +1,6 @@
+
+-- bhuvi's contribution
+
 --COMPLEX JOIN 1 = List students who have attended more than 2 events
 
 SELECT 
@@ -32,6 +35,11 @@ JOIN CLUB_TEAMS ct
     ON m.team_id = ct.team_id
 JOIN CLUB c
     ON ct.club_id = c.club_id
+ORDER BY c.club_name, ct.team_name, s.name;
+
+
+-- aashna's contribution
+
 --1
 SELECT student_id, name, email, branch, year
 FROM STUDENT
@@ -57,4 +65,3 @@ SELECT E.event_name, S.company_name, ES.amount_contributed
 FROM EVENT_SPONSORSHIP ES
 JOIN EVENT E ON ES.event_id = E.event_id
 JOIN SPONSOR S ON ES.sponsor_id = S.sponsor_id;
-ORDER BY c.club_name, ct.team_name, s.name;
